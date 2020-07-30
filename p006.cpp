@@ -18,7 +18,7 @@ int main()
     cout << abs(sum1 * sum1 - sum2) << endl;
 
     // 2nd
-    int ssum1 = ((100 + 1) * 100 / 2);
+    int ssum1 = sq((100 + 1) * 100 / 2);
     int ssum2 = (100) * (100 + 1) * (2 * 100 + 1) / 6;
     cout << abs(ssum1 - ssum2) << endl;
 }
