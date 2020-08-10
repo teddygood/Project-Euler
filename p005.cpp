@@ -14,24 +14,24 @@ int lcm(int a, int b)
 int main()
 {
     // 1st
-    // for (int i = 2520;; i++)
-    // {
-    //     bool ck = true;
-    //     for (int j = 1; j <= 20; j++)
-    //     {
-    //         if (i % j != 0)
-    //         {
-    //             ck = false;
-    //             break;
-    //         }
-    //     }
-    //     if (ck)
-    //     {
-    //         cout << i;
-    //         break;
-    //     }
-    // }
-    
+    for (int i = 2520;; i++)
+    {
+        bool ck = true;
+        for (int j = 1; j <= 20; j++)
+        {
+            if (i % j != 0)
+            {
+                ck = false;
+                break;
+            }
+        }
+        if (ck)
+        {
+            cout << i;
+            break;
+        }
+    }
+
     // GCD, LCM
     // 2nd
     int ans = 1;
