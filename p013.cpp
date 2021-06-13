@@ -1,43 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
 
-const int N = 1e7;
-
-bool ck[N];
-
-void era()
-{
-    ck[0] = ck[1] = true;
-    for (int i = 2; i < N; i++)
-    {
-        if (ck[i])
-            continue;
-        for (int j = 2 * i; j < N; j += i)
-            ck[j] = true;
-    }
-}
+int a[53];
 
 int main()
 {
-    era();
-    for (int i = 3;; i += 2)
+    for (int i = 0; i < 100; i++)
     {
-        if (!ck[i])
-            continue;
-        bool pro = true;
-        for (int j = 1; 2 * j * j < i; j++)
+        string s;
+        cin >> s;
+        for (int j = 0; j < 50; j++)
         {
-            if (!ck[i - 2 * j * j])
-            {
-                pro = false;
-                break;
-            }
+            a[j + 2] += s[j] - '0';
         }
-        if (pro)
-        {
-            cout << i << endl;
-            return 0;
-        }
+    }
+    for (int i = 51; i > 0; i--)
+    {
+        a[i - 1] += a[i] / 10;
+        a[i] %= 10;
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        cout << a[i];
     }
 }
