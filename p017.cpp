@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
 
 // one two three four five six seven eight nine
 // 3 3 5 4 4 3 5 5 4  = 36
